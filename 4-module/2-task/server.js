@@ -42,7 +42,6 @@ server.on("request", (req, res) => {
           });
 
         limitStream.on("error", function(err) {
-          console.log("limitStream:: on error ");
           res.statusCode = 413;
           res.end("Error");
         });
