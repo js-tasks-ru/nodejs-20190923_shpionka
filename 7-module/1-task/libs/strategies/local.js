@@ -12,7 +12,6 @@ module.exports = new LocalStrategy(
     }
 
     const isPasswordValid = await user.checkPassword(password);
-    console.log('isPasswordValid ' + isPasswordValid);
 
     if (isPasswordValid === false) {
       return done(null, false, 'Невереный пароль');
